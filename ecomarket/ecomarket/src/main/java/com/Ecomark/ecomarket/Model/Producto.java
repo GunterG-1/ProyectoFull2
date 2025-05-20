@@ -30,7 +30,7 @@ public class Producto {
     private String descripcionProducto;
 
     @Column (nullable = false)
-    private int precio;
+    private int preciUnitario;
 
     @Column (nullable = false)
     private int stock;

@@ -60,7 +60,7 @@ public class ProductoController {
             pro.setNombreProducto(producto.getNombreProducto());
             pro.setCodigo(producto.getCodigo());
             pro.setDescripcionProducto(producto.getDescripcionProducto());
-            pro.setPrecio(producto.getPrecio());
+            pro.setPreciUnitario(producto.getPreciUnitario());
             pro.setStock(producto.getStock());
             pro.setCategoria(producto.getCategoria());
 
