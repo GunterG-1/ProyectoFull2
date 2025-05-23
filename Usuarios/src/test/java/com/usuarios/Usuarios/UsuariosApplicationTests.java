@@ -1,10 +1,10 @@
-package com.Ecomark.ecomarket;
+package com.usuarios.Usuarios;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class EcomarketApplicationTests {
+class UsuariosApplicationTests {
 
 	@Test
 	void contextLoads() {

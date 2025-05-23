@@ -8,11 +8,11 @@
 		<version>3.3.11</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.Ecomark</groupId>
-	<artifactId>ecomarket</artifactId>
+	<groupId>com.usuarios</groupId>
+	<artifactId>Usuarios</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>ecomarket</name>
-	<description>Proyecto Microservicios</description>
+	<name>Usuarios</name>
+	<description>Microservicio Gestión de Usuarios</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -36,18 +36,9 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-mail</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-		<dependency>
-			<groupId>com.mysql</groupId>
-			<artifactId>mysql-connector-j</artifactId>
-			<scope>runtime</scope>
-		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>

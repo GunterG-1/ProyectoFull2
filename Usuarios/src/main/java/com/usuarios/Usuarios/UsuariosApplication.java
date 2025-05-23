@@ -1,13 +1,13 @@
-package com.Ecomark.ecomarket;
+package com.usuarios.Usuarios;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class EcomarketApplication {
+public class UsuariosApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(EcomarketApplication.class, args);
+		SpringApplication.run(UsuariosApplication.class, args);
 	}
 
 }
