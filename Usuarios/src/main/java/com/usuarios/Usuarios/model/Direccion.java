@@ -16,7 +16,7 @@ public class Direccion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_dirección;
+    private Long id_direccion;
 
     @Column(unique = true,length = 50,nullable = false)
     private String calle;
@@ -32,4 +32,8 @@ public class Direccion {
 
     @Column(unique = false,length = 255,nullable = true)
     private String detalle;
+    
+    @ManyToOne
+    @JoinColumn(name = "usuario_id")
+    private Usuario usuario;
 }

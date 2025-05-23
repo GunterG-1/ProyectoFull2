@@ -30,7 +30,7 @@ public class Tarjeta {
     private String nom_titular;
 
     @Column(unique = false,nullable = false)
-    private Date fecha_vencimiento;
+    private String fecha_vencimiento;
 
     @ManyToOne
     @JoinColumn(name = "id_usuario",nullable = false)

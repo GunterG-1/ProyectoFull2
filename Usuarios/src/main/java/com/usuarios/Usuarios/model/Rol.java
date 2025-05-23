@@ -12,5 +12,9 @@ public class Rol {
     private Long id_rol;
 
     @Column
-    private String nombre_rol; // Ej: "ADMIN", "CLIENTE"
+    private String nombre_rol; 
+
+    @ManyToOne
+    @JoinColumn(name = "id_usuario") 
+    private Usuario usuario;
 }

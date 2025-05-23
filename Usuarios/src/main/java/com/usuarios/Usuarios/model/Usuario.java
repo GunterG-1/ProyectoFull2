@@ -32,10 +32,10 @@ public class Usuario {
     private String ap_usuario; 
 
     @Column(unique = true,length = 50,nullable = false)
-    private String email_Usuario;
+    private String emailUsuario;
 
     @Column(unique = false,length = 25,nullable = false)
-    private String contraseña_usuario;
+    private String contrasenaUsuario;
 
     @OneToMany(mappedBy = "usuario",cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Direccion> direcciones_usuario = new ArrayList<>();
@@ -43,11 +43,6 @@ public class Usuario {
     @OneToMany(mappedBy = "usuario",cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Tarjeta> tarjetas_usuario = new ArrayList<>();
     
-    @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(
-        name = "rol",
-        joinColumns = @JoinColumn(name = "id_usuario"),
-        inverseJoinColumns = @JoinColumn(name = "id_rol")
-    )
+    @OneToMany(mappedBy = "usuario",cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Rol> roles = new HashSet<>();
 }
