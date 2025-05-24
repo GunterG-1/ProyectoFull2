@@ -1,7 +1,8 @@
 package com.usuarios.Usuarios.model;
 
 import java.util.ArrayList;
-import java.util.HashSet;
+import java.util.LinkedHashSet;
+
 import java.util.List;
 import java.util.Set;
 
@@ -44,5 +45,5 @@ public class Usuario {
     private List<Tarjeta> tarjetas_usuario = new ArrayList<>();
     
     @OneToMany(mappedBy = "usuario",cascade = CascadeType.ALL, orphanRemoval = true)
-    private Set<Rol> roles = new HashSet<>();
+    private Set<Rol> roles = new LinkedHashSet<>();
 }

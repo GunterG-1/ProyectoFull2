@@ -14,12 +14,10 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.PutMapping;
+
 
 
 
@@ -30,6 +28,25 @@ public class UsuarioController {
 
     @Autowired
     private  UsuarioService usuarioService;
+
+    public boolean esAdmin(Usuario usuario) {               //verifica si el usuario tiene el rol de ADMIN
+        if (usuario.getRoles().contains("ADMIN")) {
+            return true;
+        }
+    }
+
+    @PostMapping("/api/admin/CrearUsuario")
+    public void crearUsuarioConRol(@RequestBody Usuario usuario,@RequestBody Long id_rol ) { //para crear un usuario con rol ADMIN
+        if (esAdmin(usuario)) { 
+            usuarioService.                      
+            usuarioService.save(usuario);
+        } else {
+            throw new RuntimeException("No tienes permiso para crear un usuario");
+        }
+
+    }
+
+
 
     @PostMapping("/registro")                                   //para registrar un usuario nuevo
     public void crearUsuario(@RequestBody Usuario usuario) {

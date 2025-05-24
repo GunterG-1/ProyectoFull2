@@ -1,6 +1,5 @@
 package com.usuarios.Usuarios.model;
 
-import java.util.Date;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -35,9 +34,6 @@ public class Tarjeta {
     @ManyToOne
     @JoinColumn(name = "id_usuario",nullable = false)
     private Usuario usuario;
-
-
-
 
 
 }
